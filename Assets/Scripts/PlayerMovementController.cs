@@ -9,28 +9,46 @@ public class PlayerMovementController : MonoBehaviour
 
     public float movementSpeed = 1000.0f;
     public float maxSpeed = 10.0f;
+    public Vector2 playerDirection = new Vector2(0.0f, 0.0f);
+    public PlayerAnimationController playerAnimationController;
+
+    public GunController gunController;
+
+
     void Awake()
     {
         // Setup Rigidbody for frictionless top down movement and dynamic collision
         rigidbody2D = GetComponent<Rigidbody2D>();
 
+        gunController = new GunController(this);
         rigidbody2D.isKinematic = false;
         rigidbody2D.angularDrag = 0.0f;
         rigidbody2D.gravityScale = 0.0f;
+
+        playerAnimationController = new PlayerAnimationController(this);
     }
 
     void Update()
     {
         // Handle user input
         Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
         Move(targetVelocity);
+        //detect input
+        if (targetVelocity != Vector2.zero)
+        {
+            playerDirection = targetVelocity;
+            
+
+        }
+        else
+        {
+            playerAnimationController.Idle();
+        }
     }
 
     void Move(Vector2 targetVelocity)
-    {        
-        // Set rigidbody velocity
-        rigidbody2D.velocity = Vector2.ClampMagnitude((targetVelocity * movementSpeed) * Time.deltaTime, maxSpeed); // Multiply the target by deltaTime to make movement speed consistent across different framerates
+    {
+        rigidbody2D.velocity = Vector2.ClampMagnitude((targetVelocity * movementSpeed) * Time.deltaTime, maxSpeed); // some stuff for the fps player movement (dont clip thru walls)
     }
 }
 
