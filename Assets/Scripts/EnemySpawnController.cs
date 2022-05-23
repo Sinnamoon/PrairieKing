@@ -14,6 +14,5 @@ public class EnemySpawnController : MonoBehaviour
         // () = skobuchski ?
         // ( = skobuchska ?
         
-        enemies.Add(newEnemy);
     }
 }
