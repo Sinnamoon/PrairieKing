@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player
+      name: WalkForwards1
       rect:
         serializedVersion: 2
         x: 0
@@ -137,7 +137,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_1
+      name: WalkForwards2
       rect:
         serializedVersion: 2
         x: 30
@@ -158,7 +158,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_2
+      name: WalkForwards3
       rect:
         serializedVersion: 2
         x: 60
@@ -179,7 +179,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_3
+      name: walkLeft1
       rect:
         serializedVersion: 2
         x: 0
@@ -200,7 +200,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_4
+      name: walkLeft2
       rect:
         serializedVersion: 2
         x: 30
@@ -221,7 +221,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_5
+      name: walkLeft3
       rect:
         serializedVersion: 2
         x: 60
@@ -242,7 +242,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_6
+      name: walkRight1
       rect:
         serializedVersion: 2
         x: 0
@@ -263,7 +263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_7
+      name: walkRight2
       rect:
         serializedVersion: 2
         x: 30
@@ -284,7 +284,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_8
+      name: walkRight3
       rect:
         serializedVersion: 2
         x: 60
@@ -305,7 +305,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_9
+      name: WalkUp1
       rect:
         serializedVersion: 2
         x: 0
@@ -326,7 +326,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_10
+      name: WalkUp2
       rect:
         serializedVersion: 2
         x: 30
@@ -347,7 +347,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerSprites-sharedassets1.assets-4_11
+      name: WalkUp3
       rect:
         serializedVersion: 2
         x: 60
@@ -378,18 +378,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      playerSprites-sharedassets1.assets-4_2: 1167181075
-      playerSprites-sharedassets1.assets-4_7: 434371191
-      playerSprites-sharedassets1.assets-4_8: -150281939
-      Player: 649384977
-      playerSprites-sharedassets1.assets-4_6: 1373617700
-      playerSprites-sharedassets1.assets-4_1: 1559740480
-      playerSprites-sharedassets1.assets-4_11: -334650023
-      playerSprites-sharedassets1.assets-4_3: 1582745979
-      playerSprites-sharedassets1.assets-4_4: -683884880
-      playerSprites-sharedassets1.assets-4_10: 1543226731
-      playerSprites-sharedassets1.assets-4_5: -1746991466
-      playerSprites-sharedassets1.assets-4_9: -1078556861
+      WalkUp1: -1078556861
+      walkLeft2: -683884880
+      walkLeft3: -1746991466
+      walkRight2: 434371191
+      walkRight3: -150281939
+      WalkForwards2: 1559740480
+      WalkForwards3: 1167181075
+      WalkForwards1: 649384977
+      walkLeft1: 1582745979
+      walkRight1: 1373617700
+      WalkUp2: 1543226731
+      WalkUp3: -334650023
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[System.Serializable]
 
-public class PlayerAnimationController 
-
-
+public class PlayerAnimationController
 {
-   private readonly PlayerMovementController playerMovementController;
-   public PlayerAnimationController (PlayerMovementController playerMovementController)
+    public Animator animator;
+    public PlayerMovementController playerMovementController;
+    public void Movement(int Vertical, int Horizontal)
     {
-        this.playerMovementController = playerMovementController;
+        animator.SetInteger("Vertical", Vertical);
+        animator.SetInteger("Horizontal", Horizontal);
+
     }
-   
 }

@@ -19,13 +19,10 @@ public class PlayerMovementController : MonoBehaviour
     {
         // Setup Rigidbody for frictionless top down movement and dynamic collision
         rigidbody2D = GetComponent<Rigidbody2D>();
-
-        gunController = new GunController(this);
+ 
         rigidbody2D.isKinematic = false;
         rigidbody2D.angularDrag = 0.0f;
         rigidbody2D.gravityScale = 0.0f;
-
-        playerAnimationController = new PlayerAnimationController(this);
     }
 
     void Update()
@@ -38,12 +35,13 @@ public class PlayerMovementController : MonoBehaviour
         {
             playerDirection = targetVelocity;
             
-
         }
-        else
+        if (Input.GetButtonDown("Jump"))
         {
-            playerAnimationController.Idle();
+            gunController.Fire();
         }
+        // Update animation
+        playerAnimationController.Movement((int)targetVelocity.y, (int)targetVelocity.x);
     }
 
     void Move(Vector2 targetVelocity)
