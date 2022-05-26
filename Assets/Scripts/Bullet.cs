@@ -20,9 +20,12 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
+    void OnCollisionEnter2D (){
+        Destroy(gameObject);
+    }
 
     IEnumerator FlyingBullet(Vector3 dirToFly, float bulletSpeed) //timer for bullet life 
     {

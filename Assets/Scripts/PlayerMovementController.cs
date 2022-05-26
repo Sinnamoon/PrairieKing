@@ -48,5 +48,10 @@ public class PlayerMovementController : MonoBehaviour
     {
         rigidbody2D.velocity = Vector2.ClampMagnitude((targetVelocity * movementSpeed) * Time.deltaTime, maxSpeed); // some stuff for the fps player movement (dont clip thru walls)
     }
+    
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 }
 
