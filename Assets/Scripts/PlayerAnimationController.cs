@@ -1,16 +1,21 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+
 [System.Serializable]
 
 public class PlayerAnimationController
 {
     public Animator animator;
-    public PlayerMovementController playerMovementController;
-    public void Movement(int Vertical, int Horizontal)
+    public PlayerController playerMovementController;
+
+
+    private const string _AnimParamHorizontalName = "Horizontal";
+    private const string _AnimParamVerticalName = "Vertical";
+    public void Movement(float Vertical, float Horizontal)
     {
-        animator.SetInteger("Vertical", Vertical);
-        animator.SetInteger("Horizontal", Horizontal);
+        animator.SetFloat(_AnimParamVerticalName, Vertical);
+        animator.SetFloat(_AnimParamHorizontalName, Horizontal);
 
     }
 }
